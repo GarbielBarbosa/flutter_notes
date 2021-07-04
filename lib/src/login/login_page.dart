@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/src/forgot/forgot_page.dart';
-import 'package:flutter_notes/src/home/home_page.dart';
 import 'package:flutter_notes/src/login/login_controller.dart';
 import 'package:flutter_notes/src/register/register_page.dart';
 import 'package:flutter_notes/src/shared/validators/text_validator.dart';
@@ -192,31 +191,5 @@ class _LoginPageState extends State<LoginPage> {
         ],
       ),
     );
-  }
-
-  buttonPress() {
-    FocusScope.of(context).unfocus();
-    if (_formKey.currentState!.validate()) {
-      showDialog(
-        context: context,
-        builder: (context) => Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Tudo certo por aqui",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
   }
 }
